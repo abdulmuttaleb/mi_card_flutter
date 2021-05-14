@@ -36,46 +36,44 @@ void main() {
                     fontWeight: FontWeight.bold
                   ),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
                 Container(
-                  padding: EdgeInsets.all(10.0),
+                  margin: EdgeInsets.symmetric(horizontal: 50.0),
+                  child: SizedBox(
+                    height: 50,
+                    width: double.infinity,
+                    child: Divider(
+                      color: Colors.teal[100],
+                    ),
+                  ),
+                ),
+                Card(
                   color: Colors.white,
                   margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.phone,
-                        color: Colors.teal,
-                      ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
-                        '+2 010 0807 0689',
-                        style: TextStyle(
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      '+2 010 0807 0689',
+                      style: TextStyle(
                           color: Colors.teal[900],
                           fontFamily: 'Source Sans Serif',
                           fontSize: 20.0
-                        ),
-                      )
-                    ],
+                      ),
+                    ),
                   ),
                 ),
                 SizedBox(height: 5.0,),
-                Container(
-                  padding: EdgeInsets.all(10.0),
+                Card(
                   color: Colors.white,
                   margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.email,
-                        color: Colors.teal,
-                      ),
-                      SizedBox(width: 10.0,),
-                      Flexible(
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                    ),
+                    title: Flexible(
                         child: Text(
                           'ahmad.abdulmuttaleb@gmail.com',
                           style: TextStyle(
@@ -85,9 +83,8 @@ void main() {
                           ),
                           overflow: TextOverflow.ellipsis,
                         ),
-                      )
-                    ],
-                  ),
+                    )
+                  )
                 )
               ],
             ),
